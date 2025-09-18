@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3 {
+  color: #f564a9;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #f564a9;
+
+  text-align: center;
+  font-weight: bold;
+}
+
+nav a {
+  font-size: 18px;
+
+  font-weight: 400;
+  text-decoration: none;
+
+  color: white;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+nav ul li a {
+  font-weight: bold;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile img {
+  max-width: 200px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  padding: 20px;
+}
+
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #f564a9;
+  text-align: center;
+  color: white;
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+
+  gap: 2rem;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav {
+  background-color: #f564a9;
+  padding: 5px;
+
+  position: sticky;
+  top: 0;
+}
+
+main {
+  padding: 20px;
+
+  display: flex;
+  gap: 1.5rem;
+}
+
+#content {
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+aside {
+  flex: 1;
+}
+
+header {
+  display: inline;
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  main aside {
+    align-self: stretch;
+  }
+}
+
+/* Slider Gallery */
+.gallery-slider {
+  margin: 20px 0;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  max-height: 350px;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+/* Tombol navigasi */
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+.slider button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 768px) {
+  .slides img {
+    max-height: 250px; /* lebih pendek kalau di HP */
+  }
+}
